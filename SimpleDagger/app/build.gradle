@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.0.0"
+
+    defaultConfig {
+        applicationId "com.fanpage.tedliang.simpledagger"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            runProguard false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.squareup.dagger:dagger:1.2.2'
+    compile 'com.netflix.rxjava:rxjava-android:0.20.6'
+    compile 'com.squareup.retrofit:retrofit:1.7.1'
+    compile 'com.squareup.picasso:picasso:2.3.4'
+    compile 'com.google.code.gson:gson:2.3'
+    provided 'com.squareup.dagger:dagger-compiler:1.2.1'
+    compile 'com.android.support:recyclerview-v7:+'
+    compile 'org.mockito:mockito-core:1.10.8'
+}
