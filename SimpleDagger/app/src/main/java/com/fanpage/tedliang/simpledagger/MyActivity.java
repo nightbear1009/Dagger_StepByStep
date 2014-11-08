@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.fanpage.tedliang.simpledagger.Modules.Modules;
 import com.fanpage.tedliang.simpledagger.Modules.SchoolModules;
 import com.fanpage.tedliang.simpledagger.model.Teacher;
 
@@ -23,10 +24,8 @@ public class MyActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my);
 
-        ObjectGraph graph = ObjectGraph.create(new SchoolModules());
+        ObjectGraph graph = ObjectGraph.create(Modules.list());
         graph.inject(this);
-
-        teacher.name =" Ted ";
 
         Log.d("Ted","teacher's name "+teacher.name);
     }

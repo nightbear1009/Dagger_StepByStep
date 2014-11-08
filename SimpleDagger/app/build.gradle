@@ -3,7 +3,15 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 21
     buildToolsVersion "21.0.0"
-
+    flavorDimensions "mode"
+    productFlavors{
+        dev{
+            flavorDimensions "mode"
+        }
+        testdev{
+            flavorDimensions "mode"
+        }
+    }
     defaultConfig {
         applicationId "com.fanpage.tedliang.simpledagger"
         minSdkVersion 14
