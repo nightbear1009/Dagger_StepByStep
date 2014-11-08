@@ -10,7 +10,7 @@ import dagger.Provides;
  * Created by tedliang on 14/11/8.
  */
 @Module(
-        injects = MyActivity.class
+        injects = MyActivity.class,library = true
 )
 public class SchoolModules {
 
